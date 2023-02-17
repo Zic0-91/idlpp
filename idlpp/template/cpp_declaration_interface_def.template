@@ -1,0 +1,6 @@
+class {itf} {{
+	public:
+		{itf}() {{}};
+		virtual ~{itf}() {{}};
+{contend}
+}};

@@ -7,8 +7,9 @@ This idlpp is an idl parser written in python.
 ## install
 
 ```sh
-python -m venv .env
-. .env/bin/activate
+python -m venv env
+. env/bin/activate
+pip install --upgrade pip
 pip install arpeggio
 pip freeze > requierements.txt
 ```

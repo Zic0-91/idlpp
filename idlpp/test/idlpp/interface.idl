@@ -1,0 +1,18 @@
+// ========================================================== 
+//
+// ========================================================== 
+#ifndef Interface_IDL
+#define Interface_IDL
+
+
+module Boids_Interface {
+
+    interface iService {
+        int functionWith1Arg ( MyInt in val ); //Hip
+        int functionWith2Args( MyInt in arg1, float out arg2  );
+         //void functionWith1Arg( float out truc );
+    };	
+};
+
+	
+#endif

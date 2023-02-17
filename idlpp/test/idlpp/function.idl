@@ -1,0 +1,8 @@
+// ========================================================== 
+// Include
+// ========================================================== 
+
+void activate(); //Hop
+int  plus(long in left, long in right);
+void inc(long inout val);
+void zero(long out val);

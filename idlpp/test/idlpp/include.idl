@@ -1,0 +1,10 @@
+#ifndef TOTO
+#define TOTO
+#include "toto.idl3"
+#include "titi.idl"
+
+typedef float speed;
+typedef int myInt_2;
+typedef ::MCCM::Boolean myBoolean;
+
+#endif

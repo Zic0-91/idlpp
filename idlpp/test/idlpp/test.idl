@@ -1,0 +1,35 @@
+// ========================================================== 
+// Include
+// ========================================================== 
+#include "toto.idl"
+
+typedef float speed;
+void activate(); //Hop
+
+module TEST_MODULE {
+
+	typedef long MyInt;
+	enum Couleur { BLEU, BLANC, ROUGE };
+
+	struct MyStruct {
+	long id;
+	float val;
+	};
+	
+	typedef sequence<MyStruct,13> seq_MyStruct;
+
+	union Msg switch (Couleur) {
+	case BLEU : MyInt bleu;
+	case BLANC : seq_MyStruct white;
+	case ROUGE : float red;
+	};
+	
+	//typedef sequence<MyStruct,13> seq_MyStruct;
+	
+	interface iService {
+		int functionWith1Arg ( MyInt in val ); //Hip
+		int functionWith2Args( MyInt in arg1, float out arg2  );
+		//void functionWith1Arg( float out truc );
+	};
+
+};

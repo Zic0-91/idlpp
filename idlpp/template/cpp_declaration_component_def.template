@@ -1,0 +1,19 @@
+class {component} : public virtual yaCCM::Component{{
+public:
+	// TODO Manage attribute
+
+	//Destructor
+	virtual ~{component}(){{}};
+	
+	//Facet accesors
+{facets_accessors}
+	
+	//Receptables connectors
+{receptacles_connectors}
+	
+private:
+{receptables_declarations}
+
+	//START_{id}_private
+	//STOP
+}};

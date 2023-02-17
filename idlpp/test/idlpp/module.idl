@@ -1,0 +1,12 @@
+module TEST_MODULE {
+	module A {
+		typedef long MyInt;
+	};
+	module B {
+		typedef long MyInt;
+	};
+	module C {
+		typedef float MyInt;
+	};
+
+};

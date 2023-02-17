@@ -1,0 +1,62 @@
+#GRAMMAR
+comment             = r'//.*' / r'/\*.*\*/'
+
+#default types
+void                = 'void'
+boolean             = 'boolean'
+byte                = 'byte'
+short               = 'short'
+long                = 'long'
+float               = 'float'
+longlong            = 'long long'
+longfloat           = 'long float'
+_default_types      = void / boolean / short / byte / short / long / float / longlong / longfloat
+
+unsigned            = 'unsigned'
+signed              = 'signed'
+_signe              = unsigned / signed
+defaut_types        = _signe* _default_types
+
+#Symbols
+symbol               = r'\w+'
+operator             = r'\+|\-|\*|\/|\=\='
+
+type_symbol          = defaut_types / symbol
+
+#Type declaration
+typedef_declaration  = 'typedef' type_symbol symbol
+
+#Enum
+enum_literal         = symbol
+enum_literallist     = enum_literal (',' enum_literal)*
+enum_symbol          = symbol
+enum_declaration     = 'enum' symbol '{' enum_literallist '}' 
+
+#struct
+member               = type_symbol symbol ';'
+struct_symbol        = symbol
+struct_declaration   = 'struct' struct_symbol '{' (member)+ '}'
+
+#union
+union_symbol         = symbol
+union_case           = 'case' enum_literal ':' type_symbol symbol ';'
+union_declaration    = 'union' union_symbol 'switch' '(' enum_symbol ')' '{' union_case+ '}'
+
+#Function declaration
+parameter             = type_symbol ('inout'/ 'in' / 'out') symbol
+parameterlist         = (parameter ','*)*
+function_symbol       = symbol
+function_declaration  = type_symbol function_symbol '(' parameterlist ')'
+
+#Interface
+interface_symbol      = symbol
+interface_declaration = 'interface' interface_symbol '{' (function_declaration ';')+ '}' 
+
+
+#module
+module_symbol         = symbol
+module_declaration    = 'module' module_symbol '{' (declaration)+ '}'
+
+#IDL
+declaration           = (typedef_declaration / enum_declaration / struct_declaration / union_declaration / function_declaration / interface_declaration / module_declaration) ';'
+idlLanguage           = (declaration)+ EOF

@@ -1,0 +1,19 @@
+// ========================================================== 
+//
+// ========================================================== 
+#ifndef Component_IDL
+#define Component_IDL
+
+#include "Interface.idl"
+
+module Boids_Module {
+
+	component Component {
+		uses Module::iProvide receptacle;
+		provides iService facet;
+
+	}; 
+};
+
+	
+#endif

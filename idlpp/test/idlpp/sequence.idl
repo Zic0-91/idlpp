@@ -1,0 +1,4 @@
+
+	typedef sequence<MyStruct,13> seq_MyStruct;
+	
+	

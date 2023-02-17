@@ -1,0 +1,1 @@
+virtual {interface}& get_{contend}()=0;

@@ -1,0 +1,26 @@
+#include "stdio.h"
+
+//START_12344567
+#define TRACE(a) printf a ;
+//STOP
+
+int main(int argc, char * argv[])
+{
+	//START_999999
+	TRACE(( "AVANT" ));
+	//STOP
+
+	printf("Hello World !!!\n");
+	
+	//START_77777
+	
+	//STOP
+	
+	printf("Hello World 2 !!!\n");
+
+	//START_888888
+	//STOP
+	
+	
+	return 0;
+}

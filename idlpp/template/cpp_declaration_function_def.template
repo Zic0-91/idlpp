@@ -1,0 +1,1 @@
+virtual {retType} {function} ({contend})=0;
